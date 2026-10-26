@@ -1,0 +1,773 @@
+{
+  "name": "Engineering delivery",
+  "description": "Requirements, implementation, tests, reviews, blockers, and incomplete work for one release.",
+  "boundary": {
+    "project": "HNW",
+    "program": "Phoenix",
+    "release": "R3.2",
+    "retrieved_at": "2026-09-17T09:00:00-07:00"
+  },
+  "issues": [
+    {
+      "key": "HNW-401",
+      "summary": "Temperature validation service",
+      "type": "Story",
+      "status": "In Progress",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "A. Ferreira",
+      "team": "Controls",
+      "created_days_ago": 34,
+      "updated_days_ago": 2,
+      "due": "2026-09-18",
+      "blocked_by": [
+        "HNW-417"
+      ],
+      "blocks": [],
+      "labels": [
+        "qualification",
+        "phoenix"
+      ],
+      "description": "Reject a missing or out-of-range temperature value on POST /temperature before the value reaches the control loop.",
+      "acceptance_criteria": [
+        "Accept values from -100 through 200 inclusive.",
+        "Return a documented client error outside the approved range.",
+        "Record an audit event for every rejected request."
+      ],
+      "comments": [
+        {
+          "days_ago": 6,
+          "author": "A. Ferreira",
+          "body": "Implementation is ready except for the error code. Waiting on HNW-417."
+        },
+        {
+          "days_ago": 2,
+          "author": "A. Ferreira",
+          "body": "Holding the branch rather than guessing the contract."
+        }
+      ]
+    },
+    {
+      "key": "HNW-405",
+      "summary": "Update qualification test fixture",
+      "type": "Task",
+      "status": "Done",
+      "priority": "Medium",
+      "risk": "low",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "R. Odum",
+      "team": "Verification",
+      "created_days_ago": 28,
+      "updated_days_ago": 1,
+      "due": "2026-09-14",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [
+        "qualification"
+      ],
+      "description": "Extend the environmental fixture to the approved temperature range.",
+      "acceptance_criteria": [
+        "Fixture covers the approved temperature range."
+      ],
+      "comments": [
+        {
+          "days_ago": 1,
+          "author": "R. Odum",
+          "body": "Fixture updated to -100..200 and checked in. Note: the fixture asserts HTTP 422 on rejection, which no longer matches the draft criteria on HNW-401."
+        }
+      ]
+    },
+    {
+      "key": "HNW-409",
+      "summary": "Audit event mapping",
+      "type": "Story",
+      "status": "In Review",
+      "priority": "High",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "S. Patel",
+      "team": "Platform",
+      "created_days_ago": 26,
+      "updated_days_ago": 5,
+      "due": "2026-09-17",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [
+        "audit",
+        "security"
+      ],
+      "description": "Map every rejected control request to an auditable event with operator, value, and reason.",
+      "acceptance_criteria": [
+        "Every rejected request produces an auditable event.",
+        "The event records operator identity, submitted value, and rejection reason."
+      ],
+      "comments": [
+        {
+          "days_ago": 5,
+          "author": "Security review",
+          "body": "Reason codes are present but not enumerated. Reviewer asked for a fixed list before approval."
+        }
+      ]
+    },
+    {
+      "key": "HNW-412",
+      "summary": "Operator guide changes",
+      "type": "Task",
+      "status": "To Do",
+      "priority": "Low",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": null,
+      "team": null,
+      "created_days_ago": 33,
+      "updated_days_ago": 16,
+      "due": "2026-09-20",
+      "blocked_by": [
+        "HNW-401"
+      ],
+      "blocks": [],
+      "labels": [
+        "documentation"
+      ],
+      "description": "Document the approved validation behavior for operators.",
+      "acceptance_criteria": [
+        "Document the approved validation behavior."
+      ],
+      "comments": [
+        {
+          "days_ago": 16,
+          "author": "Tech pubs",
+          "body": "Cannot start until the error contract is final. No writer assigned."
+        }
+      ]
+    },
+    {
+      "key": "HNW-417",
+      "summary": "Resolve error response contract",
+      "type": "Story",
+      "status": "Blocked",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "M. Doyle",
+      "team": "Systems",
+      "created_days_ago": 24,
+      "updated_days_ago": 10,
+      "due": "2026-09-13",
+      "blocked_by": [
+        "HNW-423"
+      ],
+      "blocks": [],
+      "labels": [
+        "contract",
+        "phoenix"
+      ],
+      "description": "Decide and document the client error response returned when validation rejects a value.",
+      "acceptance_criteria": [],
+      "comments": [
+        {
+          "days_ago": 14,
+          "author": "Implementation",
+          "body": "Existing client library expects HTTP 422."
+        },
+        {
+          "days_ago": 12,
+          "author": "Product",
+          "body": "Draft criteria on HNW-401 say HTTP 400."
+        },
+        {
+          "days_ago": 10,
+          "author": "M. Doyle",
+          "body": "Two teams disagree and there is no recorded decision. Escalating to HNW-423."
+        }
+      ]
+    },
+    {
+      "key": "HNW-423",
+      "summary": "Product decision on client error code",
+      "type": "Decision",
+      "status": "To Do",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": null,
+      "team": null,
+      "created_days_ago": 22,
+      "updated_days_ago": 12,
+      "due": null,
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [
+        "decision",
+        "escalation"
+      ],
+      "description": "Choose HTTP 400 or HTTP 422 for rejected control values and record the rationale.",
+      "acceptance_criteria": [],
+      "comments": [
+        {
+          "days_ago": 12,
+          "author": "M. Doyle",
+          "body": "Raised for a product decision. No owner assigned and no target date set."
+        }
+      ]
+    },
+    {
+      "key": "HNW-431",
+      "summary": "Range check for secondary sensor path",
+      "type": "Story",
+      "status": "In Progress",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "A. Ferreira",
+      "team": "Controls",
+      "created_days_ago": 41,
+      "updated_days_ago": 24,
+      "due": "2026-09-19",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [
+        "phoenix"
+      ],
+      "description": "Apply the same validation to the redundant sensor input.",
+      "acceptance_criteria": [
+        "Secondary path rejects out-of-range values identically to the primary path."
+      ],
+      "comments": [
+        {
+          "days_ago": 24,
+          "author": "A. Ferreira",
+          "body": "Paused to finish HNW-401 first. Same owner, same sprint, both High."
+        }
+      ]
+    },
+    {
+      "key": "HNW-438",
+      "summary": "Rate limit on rejected submissions",
+      "type": "Story",
+      "status": "In Progress",
+      "priority": "Medium",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "S. Patel",
+      "team": "Platform",
+      "created_days_ago": 20,
+      "updated_days_ago": 4,
+      "due": "2026-09-22",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "Throttle repeated invalid submissions from one operator session.",
+      "acceptance_criteria": [],
+      "comments": [
+        {
+          "days_ago": 4,
+          "author": "S. Patel",
+          "body": "Building to a threshold nobody has written down. Needs criteria before review."
+        }
+      ]
+    },
+    {
+      "key": "HNW-444",
+      "summary": "Reject NaN and non-numeric payloads",
+      "type": "Story",
+      "status": "In Review",
+      "priority": "Medium",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "J. Whitlock",
+      "team": "Controls",
+      "created_days_ago": 19,
+      "updated_days_ago": 3,
+      "due": "2026-09-21",
+      "blocked_by": [
+        "HNW-417"
+      ],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Non-numeric input is rejected with the same client error as out-of-range input."
+      ],
+      "comments": [
+        {
+          "days_ago": 8,
+          "author": "J. Whitlock",
+          "body": "Treating NaN as out-of-range."
+        },
+        {
+          "days_ago": 3,
+          "author": "Verification",
+          "body": "Disagree. NaN is malformed input, not out of range, and should not emit a range-violation audit reason."
+        }
+      ]
+    },
+    {
+      "key": "HNW-455",
+      "summary": "Control loop timing regression",
+      "type": "Bug",
+      "status": "In Progress",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "A. Ferreira",
+      "team": "Controls",
+      "created_days_ago": 9,
+      "updated_days_ago": 1,
+      "due": "2026-09-18",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [
+        "regression",
+        "phoenix"
+      ],
+      "description": "Loop period exceeded budget after the validation change.",
+      "acceptance_criteria": [
+        "Loop period returns within the documented budget with validation enabled."
+      ],
+      "comments": [
+        {
+          "days_ago": 1,
+          "author": "Programme",
+          "body": "Marked High and due the same day as HNW-401 and HNW-431, all assigned to A. Ferreira."
+        }
+      ]
+    },
+    {
+      "key": "HNW-462",
+      "summary": "Close qualification evidence for range validation",
+      "type": "Task",
+      "status": "Done",
+      "priority": "High",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "R. Odum",
+      "team": "Verification",
+      "created_days_ago": 18,
+      "updated_days_ago": 6,
+      "due": "2026-09-15",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [
+        "qualification",
+        "evidence"
+      ],
+      "description": "Attach passing qualification evidence for the approved range.",
+      "acceptance_criteria": [
+        "Evidence covers the full approved range and the rejection path."
+      ],
+      "comments": [
+        {
+          "days_ago": 6,
+          "author": "R. Odum",
+          "body": "Closed against the fixture in HNW-405, which still asserts HTTP 422. The rejection path evidence does not match the current draft contract."
+        }
+      ]
+    },
+    {
+      "key": "HNW-468",
+      "summary": "Structured logging for control rejections",
+      "type": "Story",
+      "status": "To Do",
+      "priority": "Low",
+      "risk": "low",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "S. Patel",
+      "team": "Platform",
+      "created_days_ago": 15,
+      "updated_days_ago": 9,
+      "due": "2026-09-25",
+      "blocked_by": [
+        "HNW-409"
+      ],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Rejection log lines carry the audit event identifier."
+      ],
+      "comments": []
+    },
+    {
+      "key": "HNW-471",
+      "summary": "Retire legacy validation helper",
+      "type": "Task",
+      "status": "To Do",
+      "priority": "Low",
+      "risk": "low",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": null,
+      "team": null,
+      "created_days_ago": 47,
+      "updated_days_ago": 31,
+      "due": null,
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "Remove the pre-Phoenix helper once the new service is authoritative.",
+      "acceptance_criteria": [
+        "No caller references the legacy helper."
+      ],
+      "comments": [
+        {
+          "days_ago": 31,
+          "author": "Platform",
+          "body": "Parked. No owner."
+        }
+      ]
+    },
+    {
+      "key": "HNW-476",
+      "summary": "Operator acceptance walkthrough",
+      "type": "Task",
+      "status": "To Do",
+      "priority": "Medium",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "K. Nwosu",
+      "team": "Operations",
+      "created_days_ago": 13,
+      "updated_days_ago": 7,
+      "due": "2026-09-24",
+      "blocked_by": [
+        "HNW-412"
+      ],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Two operators complete the rejection scenario without assistance."
+      ],
+      "comments": []
+    },
+    {
+      "key": "HNW-480",
+      "summary": "Verification report for Phoenix R3.2",
+      "type": "Task",
+      "status": "To Do",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "R. Odum",
+      "team": "Verification",
+      "created_days_ago": 11,
+      "updated_days_ago": 2,
+      "due": "2026-09-26",
+      "blocked_by": [
+        "HNW-462",
+        "HNW-409"
+      ],
+      "blocks": [],
+      "labels": [
+        "release-gate",
+        "qualification"
+      ],
+      "description": "Assemble the verification report required before the release review.",
+      "acceptance_criteria": [
+        "Report cites passing evidence for every approved requirement.",
+        "Every open deviation names an owner and a disposition."
+      ],
+      "comments": []
+    },
+    {
+      "key": "HNW-484",
+      "summary": "Config flag for staged rollout",
+      "type": "Story",
+      "status": "Done",
+      "priority": "Medium",
+      "risk": "low",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "S. Patel",
+      "team": "Platform",
+      "created_days_ago": 21,
+      "updated_days_ago": 8,
+      "due": "2026-09-16",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Validation can be enabled per site without redeploy."
+      ],
+      "comments": []
+    },
+    {
+      "key": "HNW-489",
+      "summary": "Client library update for new error contract",
+      "type": "Story",
+      "status": "To Do",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": null,
+      "team": null,
+      "created_days_ago": 10,
+      "updated_days_ago": 10,
+      "due": "2026-09-23",
+      "blocked_by": [
+        "HNW-423"
+      ],
+      "blocks": [],
+      "labels": [
+        "downstream"
+      ],
+      "description": "Update the shared client library once the error contract is decided.",
+      "acceptance_criteria": [],
+      "comments": [
+        {
+          "days_ago": 10,
+          "author": "Integration",
+          "body": "Three downstream teams consume this library. No owner assigned here."
+        }
+      ]
+    },
+    {
+      "key": "HNW-493",
+      "summary": "Performance soak with validation enabled",
+      "type": "Task",
+      "status": "To Do",
+      "priority": "Medium",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "J. Whitlock",
+      "team": "Controls",
+      "created_days_ago": 8,
+      "updated_days_ago": 5,
+      "due": "2026-09-27",
+      "blocked_by": [
+        "HNW-455"
+      ],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "24-hour soak completes with no timing violations."
+      ],
+      "comments": []
+    },
+    {
+      "key": "HNW-497",
+      "summary": "Remove duplicate audit reason codes",
+      "type": "Bug",
+      "status": "To Do",
+      "priority": "Low",
+      "risk": "low",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "S. Patel",
+      "team": "Platform",
+      "created_days_ago": 7,
+      "updated_days_ago": 6,
+      "due": null,
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Each rejection reason maps to exactly one code."
+      ],
+      "comments": []
+    },
+    {
+      "key": "HNW-502",
+      "summary": "Update interface control document",
+      "type": "Task",
+      "status": "To Do",
+      "priority": "Medium",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": null,
+      "team": null,
+      "created_days_ago": 6,
+      "updated_days_ago": 6,
+      "due": "2026-09-24",
+      "blocked_by": [
+        "HNW-417"
+      ],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "ICD states the error contract and the audit event shape."
+      ],
+      "comments": [
+        {
+          "days_ago": 6,
+          "author": "Systems",
+          "body": "Needs a writer. Blocked on the same contract decision as everything else."
+        }
+      ]
+    },
+    {
+      "key": "HNW-506",
+      "summary": "Sensor calibration drift check",
+      "type": "Story",
+      "status": "In Progress",
+      "priority": "Medium",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "K. Nwosu",
+      "team": "Operations",
+      "created_days_ago": 17,
+      "updated_days_ago": 19,
+      "due": "2026-09-20",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Drift beyond tolerance raises an operator alert."
+      ],
+      "comments": [
+        {
+          "days_ago": 19,
+          "author": "K. Nwosu",
+          "body": "In Progress but untouched for nineteen days."
+        }
+      ]
+    },
+    {
+      "key": "HNW-511",
+      "summary": "Review checklist for control-path changes",
+      "type": "Task",
+      "status": "Done",
+      "priority": "Low",
+      "risk": "low",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "M. Doyle",
+      "team": "Systems",
+      "created_days_ago": 25,
+      "updated_days_ago": 12,
+      "due": null,
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Checklist is linked from the pull request template."
+      ],
+      "comments": []
+    },
+    {
+      "key": "HNW-515",
+      "summary": "Reject submissions during maintenance mode",
+      "type": "Story",
+      "status": "To Do",
+      "priority": "Low",
+      "risk": "low",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "J. Whitlock",
+      "team": "Controls",
+      "created_days_ago": 5,
+      "updated_days_ago": 4,
+      "due": "2026-09-29",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Maintenance mode returns a distinct, documented response."
+      ],
+      "comments": []
+    },
+    {
+      "key": "HNW-519",
+      "summary": "Backfill unit tests for boundary values",
+      "type": "Task",
+      "status": "In Progress",
+      "priority": "Medium",
+      "risk": "low",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "R. Odum",
+      "team": "Verification",
+      "created_days_ago": 12,
+      "updated_days_ago": 2,
+      "due": null,
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Tests cover -100, 200, and one value outside each boundary."
+      ],
+      "comments": []
+    },
+    {
+      "key": "HNW-524",
+      "summary": "Deprecation notice for HTTP 422 responses",
+      "type": "Task",
+      "status": "To Do",
+      "priority": "Low",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": null,
+      "team": null,
+      "created_days_ago": 4,
+      "updated_days_ago": 4,
+      "due": null,
+      "blocked_by": [
+        "HNW-423",
+        "HNW-489"
+      ],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [],
+      "comments": [
+        {
+          "days_ago": 4,
+          "author": "Integration",
+          "body": "Only needed if the decision goes to 400. Cannot be scoped until then."
+        }
+      ]
+    },
+    {
+      "key": "HNW-528",
+      "summary": "Site readiness questionnaire",
+      "type": "Task",
+      "status": "To Do",
+      "priority": "Medium",
+      "risk": "low",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "K. Nwosu",
+      "team": "Operations",
+      "created_days_ago": 3,
+      "updated_days_ago": 3,
+      "due": "2026-09-30",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Every pilot site returns a completed questionnaire."
+      ],
+      "comments": []
+    }
+  ]
+}

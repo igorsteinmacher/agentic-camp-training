@@ -1,0 +1,714 @@
+{
+  "name": "Program and release management",
+  "description": "Milestones, dependencies, release readiness, owners, and schedule risk across two releases.",
+  "boundary": {
+    "project": "PRG",
+    "program": "Phoenix, Aurora, Meridian",
+    "release": "R3.2, R3.3",
+    "retrieved_at": "2026-09-17T09:00:00-07:00"
+  },
+  "issues": [
+    {
+      "key": "PRG-101",
+      "summary": "Phoenix R3.2 release readiness review",
+      "type": "Milestone",
+      "status": "To Do",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "L. Barros",
+      "team": "Program",
+      "created_days_ago": 60,
+      "updated_days_ago": 2,
+      "due": "2026-09-28",
+      "blocked_by": [
+        "PRG-104",
+        "PRG-107",
+        "PRG-118"
+      ],
+      "blocks": [],
+      "labels": [
+        "gate"
+      ],
+      "description": "Gate review for Phoenix R3.2. All verification evidence and open deviations must be presented.",
+      "acceptance_criteria": [
+        "Verification report complete.",
+        "Every open deviation has a disposition.",
+        "Field readiness confirmed for the pilot sites."
+      ],
+      "comments": []
+    },
+    {
+      "key": "PRG-104",
+      "summary": "Verification evidence package complete",
+      "type": "Milestone",
+      "status": "In Progress",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "R. Odum",
+      "team": "Verification",
+      "created_days_ago": 45,
+      "updated_days_ago": 2,
+      "due": "2026-09-26",
+      "blocked_by": [
+        "PRG-112"
+      ],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Evidence exists for every approved requirement in R3.2."
+      ],
+      "comments": [
+        {
+          "days_ago": 2,
+          "author": "R. Odum",
+          "body": "Blocked on the error-contract decision. Rejection-path evidence cannot be finalised."
+        }
+      ]
+    },
+    {
+      "key": "PRG-107",
+      "summary": "Regulatory documentation submitted",
+      "type": "Milestone",
+      "status": "To Do",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": null,
+      "team": null,
+      "created_days_ago": 44,
+      "updated_days_ago": 18,
+      "due": "2026-09-25",
+      "blocked_by": [
+        "PRG-112"
+      ],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [],
+      "comments": [
+        {
+          "days_ago": 18,
+          "author": "L. Barros",
+          "body": "No owner since the compliance lead moved to the Aurora program. Untouched for eighteen days."
+        }
+      ]
+    },
+    {
+      "key": "PRG-112",
+      "summary": "Error contract decision recorded",
+      "type": "Decision",
+      "status": "Blocked",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": null,
+      "team": null,
+      "created_days_ago": 22,
+      "updated_days_ago": 12,
+      "due": null,
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [
+        "escalation",
+        "cross-program"
+      ],
+      "description": "Mirrors HNW-423 in the engineering backlog. Three release milestones depend on it.",
+      "acceptance_criteria": [],
+      "comments": [
+        {
+          "days_ago": 12,
+          "author": "L. Barros",
+          "body": "This single decision blocks verification, regulatory submission, and the client library. It has no owner and no date."
+        }
+      ]
+    },
+    {
+      "key": "PRG-118",
+      "summary": "Pilot site readiness confirmed",
+      "type": "Milestone",
+      "status": "In Progress",
+      "priority": "High",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "K. Nwosu",
+      "team": "Operations",
+      "created_days_ago": 40,
+      "updated_days_ago": 6,
+      "due": "2026-09-27",
+      "blocked_by": [
+        "PRG-124"
+      ],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Two pilot sites confirm operator training and rollback plan."
+      ],
+      "comments": []
+    },
+    {
+      "key": "PRG-124",
+      "summary": "Operator training material approved",
+      "type": "Story",
+      "status": "To Do",
+      "priority": "Medium",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": null,
+      "team": null,
+      "created_days_ago": 38,
+      "updated_days_ago": 16,
+      "due": "2026-09-24",
+      "blocked_by": [
+        "PRG-112"
+      ],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Training covers the rejection path and the audit trail."
+      ],
+      "comments": [
+        {
+          "days_ago": 16,
+          "author": "Tech pubs",
+          "body": "Cannot be written before the contract decision. No writer assigned."
+        }
+      ]
+    },
+    {
+      "key": "PRG-130",
+      "summary": "R3.3 scope freeze",
+      "type": "Milestone",
+      "status": "To Do",
+      "priority": "High",
+      "risk": "medium",
+      "release": "R3.3",
+      "program": "Phoenix",
+      "owner": "L. Barros",
+      "team": "Program",
+      "created_days_ago": 35,
+      "updated_days_ago": 4,
+      "due": "2026-10-05",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Scope list signed by engineering, verification, and operations."
+      ],
+      "comments": [
+        {
+          "days_ago": 4,
+          "author": "L. Barros",
+          "body": "Teams are being asked to plan R3.3 while R3.2 is still unresolved."
+        }
+      ]
+    },
+    {
+      "key": "PRG-133",
+      "summary": "Aurora integration dependency on Phoenix contract",
+      "type": "Story",
+      "status": "Blocked",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.3",
+      "program": "Aurora",
+      "owner": "D. Kim",
+      "team": "Aurora",
+      "created_days_ago": 30,
+      "updated_days_ago": 9,
+      "due": "2026-10-09",
+      "blocked_by": [
+        "PRG-112"
+      ],
+      "blocks": [],
+      "labels": [
+        "cross-program"
+      ],
+      "description": "Aurora cannot finalise its adapter until Phoenix publishes the error contract.",
+      "acceptance_criteria": [
+        "Adapter conforms to the published Phoenix error contract."
+      ],
+      "comments": [
+        {
+          "days_ago": 9,
+          "author": "D. Kim",
+          "body": "Aurora has been holding this for three weeks. Escalated once, no response recorded."
+        }
+      ]
+    },
+    {
+      "key": "PRG-138",
+      "summary": "Long-lead hardware order for pilot sites",
+      "type": "Task",
+      "status": "Done",
+      "priority": "High",
+      "risk": "low",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "K. Nwosu",
+      "team": "Operations",
+      "created_days_ago": 70,
+      "updated_days_ago": 20,
+      "due": "2026-08-30",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Hardware delivered to both pilot sites."
+      ],
+      "comments": []
+    },
+    {
+      "key": "PRG-142",
+      "summary": "Change control board submission",
+      "type": "Task",
+      "status": "To Do",
+      "priority": "Medium",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "M. Doyle",
+      "team": "Systems",
+      "created_days_ago": 26,
+      "updated_days_ago": 5,
+      "due": "2026-09-24",
+      "blocked_by": [
+        "PRG-112"
+      ],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Submission lists every interface change in R3.2."
+      ],
+      "comments": []
+    },
+    {
+      "key": "PRG-147",
+      "summary": "Rollback procedure rehearsed",
+      "type": "Task",
+      "status": "To Do",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": null,
+      "team": null,
+      "created_days_ago": 24,
+      "updated_days_ago": 21,
+      "due": "2026-09-27",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [],
+      "comments": [
+        {
+          "days_ago": 21,
+          "author": "K. Nwosu",
+          "body": "Nobody owns the rehearsal. It is a release-gate item and it is three weeks stale."
+        }
+      ]
+    },
+    {
+      "key": "PRG-152",
+      "summary": "Capacity plan for Controls team",
+      "type": "Task",
+      "status": "In Progress",
+      "priority": "Medium",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "L. Barros",
+      "team": "Program",
+      "created_days_ago": 20,
+      "updated_days_ago": 1,
+      "due": "2026-09-22",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [
+        "capacity"
+      ],
+      "description": "A. Ferreira is the named owner on three High-priority items due 18 September.",
+      "acceptance_criteria": [
+        "No engineer owns more than one High item on the same due date."
+      ],
+      "comments": [
+        {
+          "days_ago": 1,
+          "author": "L. Barros",
+          "body": "HNW-401, HNW-431 and HNW-455 are all High, all due 18 September, all A. Ferreira."
+        }
+      ]
+    },
+    {
+      "key": "PRG-158",
+      "summary": "R3.2 deviation log reviewed",
+      "type": "Task",
+      "status": "In Progress",
+      "priority": "High",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "R. Odum",
+      "team": "Verification",
+      "created_days_ago": 18,
+      "updated_days_ago": 3,
+      "due": "2026-09-26",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Every deviation is open, closed, or accepted with a named approver."
+      ],
+      "comments": []
+    },
+    {
+      "key": "PRG-163",
+      "summary": "Supplier qualification refresh",
+      "type": "Task",
+      "status": "To Do",
+      "priority": "Low",
+      "risk": "medium",
+      "release": "R3.3",
+      "program": "Phoenix",
+      "owner": "K. Nwosu",
+      "team": "Operations",
+      "created_days_ago": 52,
+      "updated_days_ago": 29,
+      "due": "2026-10-16",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Supplier certificates valid through the R3.3 window."
+      ],
+      "comments": []
+    },
+    {
+      "key": "PRG-168",
+      "summary": "Interface control document baseline",
+      "type": "Task",
+      "status": "To Do",
+      "priority": "Medium",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": null,
+      "team": null,
+      "created_days_ago": 16,
+      "updated_days_ago": 16,
+      "due": "2026-09-24",
+      "blocked_by": [
+        "PRG-112"
+      ],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "ICD baselined and distributed to Aurora and Meridian."
+      ],
+      "comments": []
+    },
+    {
+      "key": "PRG-172",
+      "summary": "Meridian program alignment review",
+      "type": "Milestone",
+      "status": "To Do",
+      "priority": "Medium",
+      "risk": "medium",
+      "release": "R3.3",
+      "program": "Meridian",
+      "owner": "P. Iyer",
+      "team": "Meridian",
+      "created_days_ago": 28,
+      "updated_days_ago": 11,
+      "due": "2026-10-12",
+      "blocked_by": [
+        "PRG-168"
+      ],
+      "blocks": [],
+      "labels": [
+        "cross-program"
+      ],
+      "description": "",
+      "acceptance_criteria": [
+        "Meridian confirms it can consume the baselined ICD."
+      ],
+      "comments": []
+    },
+    {
+      "key": "PRG-177",
+      "summary": "Field service bulletin drafted",
+      "type": "Task",
+      "status": "To Do",
+      "priority": "Low",
+      "risk": "low",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "K. Nwosu",
+      "team": "Operations",
+      "created_days_ago": 14,
+      "updated_days_ago": 8,
+      "due": "2026-09-30",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Bulletin describes the new rejection behaviour for field engineers."
+      ],
+      "comments": []
+    },
+    {
+      "key": "PRG-182",
+      "summary": "Post-release monitoring plan",
+      "type": "Task",
+      "status": "To Do",
+      "priority": "Medium",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "S. Patel",
+      "team": "Platform",
+      "created_days_ago": 12,
+      "updated_days_ago": 7,
+      "due": "2026-09-29",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Plan names the signals watched in the first two weeks and who watches them."
+      ],
+      "comments": []
+    },
+    {
+      "key": "PRG-187",
+      "summary": "R3.2 schedule re-baseline",
+      "type": "Task",
+      "status": "In Progress",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "L. Barros",
+      "team": "Program",
+      "created_days_ago": 10,
+      "updated_days_ago": 1,
+      "due": "2026-09-22",
+      "blocked_by": [
+        "PRG-112"
+      ],
+      "blocks": [],
+      "labels": [],
+      "description": "Three gate items are already past their planned dates.",
+      "acceptance_criteria": [
+        "New dates agreed with engineering, verification, and operations."
+      ],
+      "comments": [
+        {
+          "days_ago": 1,
+          "author": "L. Barros",
+          "body": "PRG-107, PRG-124 and PRG-147 are all behind. The common cause is PRG-112."
+        }
+      ]
+    },
+    {
+      "key": "PRG-191",
+      "summary": "Customer communication plan",
+      "type": "Task",
+      "status": "To Do",
+      "priority": "Medium",
+      "risk": "low",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": null,
+      "team": null,
+      "created_days_ago": 9,
+      "updated_days_ago": 9,
+      "due": "2026-10-01",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Message approved by program and by the account team."
+      ],
+      "comments": []
+    },
+    {
+      "key": "PRG-196",
+      "summary": "Aurora and Phoenix joint test window",
+      "type": "Milestone",
+      "status": "To Do",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.3",
+      "program": "Aurora",
+      "owner": "D. Kim",
+      "team": "Aurora",
+      "created_days_ago": 8,
+      "updated_days_ago": 4,
+      "due": "2026-10-14",
+      "blocked_by": [
+        "PRG-133",
+        "PRG-101"
+      ],
+      "blocks": [],
+      "labels": [
+        "cross-program"
+      ],
+      "description": "",
+      "acceptance_criteria": [
+        "Both programs confirm a shared test environment and window."
+      ],
+      "comments": []
+    },
+    {
+      "key": "PRG-201",
+      "summary": "Retire R3.1 support branch",
+      "type": "Task",
+      "status": "To Do",
+      "priority": "Low",
+      "risk": "low",
+      "release": "R3.3",
+      "program": "Phoenix",
+      "owner": "S. Patel",
+      "team": "Platform",
+      "created_days_ago": 55,
+      "updated_days_ago": 33,
+      "due": null,
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "No active customer remains on R3.1."
+      ],
+      "comments": []
+    },
+    {
+      "key": "PRG-205",
+      "summary": "Verification resource request for R3.3",
+      "type": "Task",
+      "status": "To Do",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.3",
+      "program": "Phoenix",
+      "owner": "R. Odum",
+      "team": "Verification",
+      "created_days_ago": 7,
+      "updated_days_ago": 3,
+      "due": "2026-10-02",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [
+        "capacity"
+      ],
+      "description": "Verification is committed to both the R3.2 gate and the R3.3 scope freeze in the same fortnight.",
+      "acceptance_criteria": [
+        "Either an additional verification engineer is approved or one date moves."
+      ],
+      "comments": [
+        {
+          "days_ago": 3,
+          "author": "R. Odum",
+          "body": "Both are marked High. We cannot do both."
+        }
+      ]
+    },
+    {
+      "key": "PRG-210",
+      "summary": "Update release calendar for stakeholders",
+      "type": "Task",
+      "status": "Done",
+      "priority": "Low",
+      "risk": "low",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "L. Barros",
+      "team": "Program",
+      "created_days_ago": 15,
+      "updated_days_ago": 6,
+      "due": null,
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Calendar published to the program wiki."
+      ],
+      "comments": []
+    },
+    {
+      "key": "PRG-214",
+      "summary": "Security sign-off for audit events",
+      "type": "Task",
+      "status": "In Review",
+      "priority": "High",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "T. Alvarez",
+      "team": "Security",
+      "created_days_ago": 13,
+      "updated_days_ago": 5,
+      "due": "2026-09-25",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Reason codes enumerated and approved."
+      ],
+      "comments": [
+        {
+          "days_ago": 5,
+          "author": "T. Alvarez",
+          "body": "Waiting on the enumerated reason list from HNW-409."
+        }
+      ]
+    },
+    {
+      "key": "PRG-219",
+      "summary": "Confirm training environment availability",
+      "type": "Task",
+      "status": "To Do",
+      "priority": "Medium",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "K. Nwosu",
+      "team": "Operations",
+      "created_days_ago": 11,
+      "updated_days_ago": 11,
+      "due": "2026-09-26",
+      "blocked_by": [
+        "PRG-124"
+      ],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Environment available for two training cohorts."
+      ],
+      "comments": []
+    }
+  ]
+}

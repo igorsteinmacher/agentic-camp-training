@@ -1,0 +1,758 @@
+{
+  "name": "Leadership portfolio",
+  "description": "Cross-program blockers, resource conflicts, and evidence gaps requiring a leadership decision.",
+  "boundary": {
+    "project": "LDR",
+    "program": "Portfolio",
+    "release": "R3.2, R3.3",
+    "retrieved_at": "2026-09-17T09:00:00-07:00"
+  },
+  "issues": [
+    {
+      "key": "LDR-301",
+      "summary": "Phoenix R3.2 gate at risk",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "L. Barros",
+      "team": "Program",
+      "created_days_ago": 20,
+      "updated_days_ago": 1,
+      "due": "2026-09-28",
+      "blocked_by": [
+        "LDR-305"
+      ],
+      "blocks": [],
+      "labels": [
+        "gate",
+        "decision-needed"
+      ],
+      "description": "Three of five gate items are behind plan. All trace to one undecided interface contract.",
+      "acceptance_criteria": [
+        "Gate date confirmed or formally moved with stakeholder agreement."
+      ],
+      "comments": [
+        {
+          "days_ago": 1,
+          "author": "L. Barros",
+          "body": "Requesting a leadership decision this week: assign an owner to LDR-305 or move the gate."
+        }
+      ]
+    },
+    {
+      "key": "LDR-305",
+      "summary": "Undecided error contract blocks three programs",
+      "type": "Decision",
+      "status": "Blocked",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": null,
+      "team": null,
+      "created_days_ago": 22,
+      "updated_days_ago": 12,
+      "due": null,
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [
+        "escalation",
+        "cross-program",
+        "decision-needed"
+      ],
+      "description": "A single unmade product decision blocks Phoenix verification, Aurora integration, and the shared client library.",
+      "acceptance_criteria": [],
+      "comments": [
+        {
+          "days_ago": 12,
+          "author": "Program",
+          "body": "Raised twelve days ago. Still unowned and undated."
+        },
+        {
+          "days_ago": 4,
+          "author": "Aurora",
+          "body": "Third escalation from Aurora. No response recorded."
+        }
+      ]
+    },
+    {
+      "key": "LDR-309",
+      "summary": "Controls engineer over-committed",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "L. Barros",
+      "team": "Program",
+      "created_days_ago": 14,
+      "updated_days_ago": 1,
+      "due": "2026-09-22",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [
+        "capacity",
+        "decision-needed"
+      ],
+      "description": "One engineer is the named owner of three High-priority items with the same due date.",
+      "acceptance_criteria": [
+        "Two of the three items are reassigned or re-dated."
+      ],
+      "comments": [
+        {
+          "days_ago": 1,
+          "author": "L. Barros",
+          "body": "Resource conflict, not a technical problem. Needs a priority call."
+        }
+      ]
+    },
+    {
+      "key": "LDR-313",
+      "summary": "Compliance lead vacancy on Phoenix",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": null,
+      "team": null,
+      "created_days_ago": 19,
+      "updated_days_ago": 18,
+      "due": "2026-09-25",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [
+        "capacity",
+        "evidence-gap"
+      ],
+      "description": "Regulatory submission has had no owner since the previous lead moved to Aurora.",
+      "acceptance_criteria": [],
+      "comments": [
+        {
+          "days_ago": 18,
+          "author": "Program",
+          "body": "Eighteen days without an owner on a gate item. No backfill requested."
+        }
+      ]
+    },
+    {
+      "key": "LDR-318",
+      "summary": "Verification double-booked across releases",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.3",
+      "program": "Phoenix",
+      "owner": "R. Odum",
+      "team": "Verification",
+      "created_days_ago": 7,
+      "updated_days_ago": 3,
+      "due": "2026-10-02",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [
+        "capacity"
+      ],
+      "description": "Verification is committed to the R3.2 gate and the R3.3 scope freeze in the same fortnight.",
+      "acceptance_criteria": [
+        "Additional capacity approved, or one milestone moves."
+      ],
+      "comments": []
+    },
+    {
+      "key": "LDR-322",
+      "summary": "Qualification evidence does not match current contract",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "R. Odum",
+      "team": "Verification",
+      "created_days_ago": 6,
+      "updated_days_ago": 2,
+      "due": "2026-09-26",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [
+        "evidence-gap",
+        "qualification"
+      ],
+      "description": "A closed evidence item was signed against a fixture that asserts the superseded error code.",
+      "acceptance_criteria": [
+        "Evidence re-run against the decided contract, or the closure is formally reversed."
+      ],
+      "comments": [
+        {
+          "days_ago": 2,
+          "author": "R. Odum",
+          "body": "This is closed in the tracker but the evidence behind it is stale. It would not survive an audit."
+        }
+      ]
+    },
+    {
+      "key": "LDR-326",
+      "summary": "Aurora adapter held for three weeks",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.3",
+      "program": "Aurora",
+      "owner": "D. Kim",
+      "team": "Aurora",
+      "created_days_ago": 30,
+      "updated_days_ago": 9,
+      "due": "2026-10-09",
+      "blocked_by": [
+        "LDR-305"
+      ],
+      "blocks": [],
+      "labels": [
+        "cross-program"
+      ],
+      "description": "",
+      "acceptance_criteria": [
+        "Adapter unblocked or Aurora scope re-planned."
+      ],
+      "comments": []
+    },
+    {
+      "key": "LDR-330",
+      "summary": "Meridian dependent on unbaselined interface document",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "Medium",
+      "risk": "high",
+      "release": "R3.3",
+      "program": "Meridian",
+      "owner": "P. Iyer",
+      "team": "Meridian",
+      "created_days_ago": 28,
+      "updated_days_ago": 11,
+      "due": "2026-10-12",
+      "blocked_by": [
+        "LDR-305"
+      ],
+      "blocks": [],
+      "labels": [
+        "cross-program",
+        "evidence-gap"
+      ],
+      "description": "",
+      "acceptance_criteria": [
+        "Meridian confirms it can consume the baselined document."
+      ],
+      "comments": []
+    },
+    {
+      "key": "LDR-334",
+      "summary": "Rollback rehearsal unowned",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": null,
+      "team": null,
+      "created_days_ago": 24,
+      "updated_days_ago": 21,
+      "due": "2026-09-27",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [
+        "evidence-gap",
+        "gate"
+      ],
+      "description": "",
+      "acceptance_criteria": [],
+      "comments": [
+        {
+          "days_ago": 21,
+          "author": "Operations",
+          "body": "A gate item with no owner and no progress for three weeks."
+        }
+      ]
+    },
+    {
+      "key": "LDR-338",
+      "summary": "Client library change affects three downstream teams",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": null,
+      "team": null,
+      "created_days_ago": 10,
+      "updated_days_ago": 10,
+      "due": "2026-09-23",
+      "blocked_by": [
+        "LDR-305"
+      ],
+      "blocks": [],
+      "labels": [
+        "cross-program"
+      ],
+      "description": "Three teams consume the shared client library. The change has no owner.",
+      "acceptance_criteria": [
+        "Owner assigned and downstream teams notified."
+      ],
+      "comments": []
+    },
+    {
+      "key": "LDR-342",
+      "summary": "Security sign-off waiting on enumerated reason codes",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "Medium",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "T. Alvarez",
+      "team": "Security",
+      "created_days_ago": 13,
+      "updated_days_ago": 5,
+      "due": "2026-09-25",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Reason codes enumerated and approved."
+      ],
+      "comments": []
+    },
+    {
+      "key": "LDR-346",
+      "summary": "R3.3 planning proceeding on unstable R3.2 baseline",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "Medium",
+      "risk": "high",
+      "release": "R3.3",
+      "program": "Phoenix",
+      "owner": "L. Barros",
+      "team": "Program",
+      "created_days_ago": 8,
+      "updated_days_ago": 4,
+      "due": "2026-10-05",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "R3.3 scope freeze either waits for the R3.2 gate or accepts a stated rework risk."
+      ],
+      "comments": []
+    },
+    {
+      "key": "LDR-350",
+      "summary": "Operator training blocked on the same decision",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "Medium",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": null,
+      "team": null,
+      "created_days_ago": 38,
+      "updated_days_ago": 16,
+      "due": "2026-09-24",
+      "blocked_by": [
+        "LDR-305"
+      ],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Training material approved before the pilot window."
+      ],
+      "comments": []
+    },
+    {
+      "key": "LDR-354",
+      "summary": "Two pilot sites, one rollback plan",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "Medium",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "K. Nwosu",
+      "team": "Operations",
+      "created_days_ago": 17,
+      "updated_days_ago": 6,
+      "due": "2026-09-27",
+      "blocked_by": [
+        "LDR-334"
+      ],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Each site has a site-specific rollback plan."
+      ],
+      "comments": []
+    },
+    {
+      "key": "LDR-358",
+      "summary": "Supplier certificates expire inside the R3.3 window",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "Low",
+      "risk": "medium",
+      "release": "R3.3",
+      "program": "Meridian",
+      "owner": "K. Nwosu",
+      "team": "Operations",
+      "created_days_ago": 52,
+      "updated_days_ago": 29,
+      "due": "2026-10-16",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Certificates refreshed before the R3.3 build."
+      ],
+      "comments": []
+    },
+    {
+      "key": "LDR-362",
+      "summary": "No post-release monitoring owner named",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "Medium",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "S. Patel",
+      "team": "Platform",
+      "created_days_ago": 12,
+      "updated_days_ago": 7,
+      "due": "2026-09-29",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Named owner for the first two weeks after release."
+      ],
+      "comments": []
+    },
+    {
+      "key": "LDR-366",
+      "summary": "Change control submission incomplete",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "Medium",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "M. Doyle",
+      "team": "Systems",
+      "created_days_ago": 26,
+      "updated_days_ago": 5,
+      "due": "2026-09-24",
+      "blocked_by": [
+        "LDR-305"
+      ],
+      "blocks": [],
+      "labels": [
+        "evidence-gap"
+      ],
+      "description": "",
+      "acceptance_criteria": [
+        "Submission lists every interface change."
+      ],
+      "comments": []
+    },
+    {
+      "key": "LDR-370",
+      "summary": "Deviation log has unapproved entries",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "High",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "R. Odum",
+      "team": "Verification",
+      "created_days_ago": 18,
+      "updated_days_ago": 3,
+      "due": "2026-09-26",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [
+        "evidence-gap",
+        "gate"
+      ],
+      "description": "",
+      "acceptance_criteria": [
+        "Every deviation has a named approver and a disposition."
+      ],
+      "comments": []
+    },
+    {
+      "key": "LDR-374",
+      "summary": "Aurora and Phoenix want the same test window",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.3",
+      "program": "Aurora",
+      "owner": "D. Kim",
+      "team": "Aurora",
+      "created_days_ago": 8,
+      "updated_days_ago": 4,
+      "due": "2026-10-14",
+      "blocked_by": [
+        "LDR-301"
+      ],
+      "blocks": [],
+      "labels": [
+        "cross-program",
+        "capacity"
+      ],
+      "description": "",
+      "acceptance_criteria": [
+        "A shared window is agreed or one program re-plans."
+      ],
+      "comments": []
+    },
+    {
+      "key": "LDR-378",
+      "summary": "Customer communication not approved",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "Low",
+      "risk": "low",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": null,
+      "team": null,
+      "created_days_ago": 9,
+      "updated_days_ago": 9,
+      "due": "2026-10-01",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Message approved by program and the account team."
+      ],
+      "comments": []
+    },
+    {
+      "key": "LDR-382",
+      "summary": "Legacy branch still supported with no retirement date",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "Low",
+      "risk": "low",
+      "release": "R3.3",
+      "program": "Meridian",
+      "owner": "S. Patel",
+      "team": "Platform",
+      "created_days_ago": 55,
+      "updated_days_ago": 33,
+      "due": null,
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Retirement date agreed with the account team."
+      ],
+      "comments": []
+    },
+    {
+      "key": "LDR-386",
+      "summary": "Timing regression not yet reproduced in soak",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "J. Whitlock",
+      "team": "Controls",
+      "created_days_ago": 8,
+      "updated_days_ago": 5,
+      "due": "2026-09-27",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [
+        "evidence-gap"
+      ],
+      "description": "",
+      "acceptance_criteria": [
+        "24-hour soak completes with no timing violations."
+      ],
+      "comments": []
+    },
+    {
+      "key": "LDR-390",
+      "summary": "Interface document has no assigned writer",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "Medium",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": null,
+      "team": null,
+      "created_days_ago": 16,
+      "updated_days_ago": 16,
+      "due": "2026-09-24",
+      "blocked_by": [
+        "LDR-305"
+      ],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Writer assigned and baseline date agreed."
+      ],
+      "comments": []
+    },
+    {
+      "key": "LDR-394",
+      "summary": "Calibration drift work stalled",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "Medium",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "K. Nwosu",
+      "team": "Operations",
+      "created_days_ago": 17,
+      "updated_days_ago": 19,
+      "due": "2026-09-20",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Drift check complete or formally deferred to R3.3."
+      ],
+      "comments": []
+    },
+    {
+      "key": "LDR-398",
+      "summary": "Escalation path unclear for cross-program decisions",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "High",
+      "risk": "high",
+      "release": "R3.2",
+      "program": "Portfolio",
+      "owner": null,
+      "team": null,
+      "created_days_ago": 12,
+      "updated_days_ago": 12,
+      "due": null,
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [
+        "decision-needed",
+        "cross-program"
+      ],
+      "description": "Three programs have escalated the same decision separately with no single route or owner.",
+      "acceptance_criteria": [],
+      "comments": [
+        {
+          "days_ago": 12,
+          "author": "Portfolio",
+          "body": "Symptom of the LDR-305 pattern. Worth a standing decision owner for interface contracts."
+        }
+      ]
+    },
+    {
+      "key": "LDR-402",
+      "summary": "Training environment unconfirmed",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "Medium",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "K. Nwosu",
+      "team": "Operations",
+      "created_days_ago": 11,
+      "updated_days_ago": 11,
+      "due": "2026-09-26",
+      "blocked_by": [
+        "LDR-350"
+      ],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Environment available for two cohorts."
+      ],
+      "comments": []
+    },
+    {
+      "key": "LDR-406",
+      "summary": "Field bulletin not drafted",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "Low",
+      "risk": "low",
+      "release": "R3.2",
+      "program": "Phoenix",
+      "owner": "K. Nwosu",
+      "team": "Operations",
+      "created_days_ago": 14,
+      "updated_days_ago": 8,
+      "due": "2026-09-30",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [],
+      "description": "",
+      "acceptance_criteria": [
+        "Bulletin describes the new rejection behaviour."
+      ],
+      "comments": []
+    },
+    {
+      "key": "LDR-410",
+      "summary": "No single view of R3.2 readiness",
+      "type": "Risk",
+      "status": "Open",
+      "priority": "Medium",
+      "risk": "medium",
+      "release": "R3.2",
+      "program": "Portfolio",
+      "owner": "L. Barros",
+      "team": "Program",
+      "created_days_ago": 10,
+      "updated_days_ago": 2,
+      "due": "2026-09-28",
+      "blocked_by": [],
+      "blocks": [],
+      "labels": [
+        "evidence-gap"
+      ],
+      "description": "Readiness is tracked in three places that disagree about which items are gate items.",
+      "acceptance_criteria": [
+        "One readiness view agreed and referenced by the gate review."
+      ],
+      "comments": []
+    }
+  ]
+}
